@@ -7,7 +7,6 @@ A simple and interactive Tkinter GUI is also included, where the user enters the
 📂 Project Overview
 
 This project includes:
-
 ✔ Machine Learning Model (Python)
 
 Reads dataset student_info.csv
