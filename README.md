@@ -70,7 +70,7 @@ Source institution: Unknown / Anonymized (Kaggle Open Dataset)
 
 🚀 How to Run the Project
 1. Clone the repository
-git clone https://github.com/yourusername/student-marks-predictor.git
+git clone (https://github.com/MudasirIqbal-Rana/Cradit_Card_Fraud_detection.git)
 cd student-marks-predictor
 
 2. Install required libraries
