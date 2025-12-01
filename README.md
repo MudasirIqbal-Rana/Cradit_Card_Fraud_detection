@@ -1,125 +1,127 @@
 # Cradit_Card_Fraud_detection
-📘 Student Marks Prediction Using Linear Regression
+📘 Student Marks Predictor (Machine Learning + Tkinter GUI)
 
-This project builds a Machine Learning model that predicts a student's marks based on the number of study hours using Linear Regression.
-The dataset contains two columns:
+This project predicts a student's expected marks based on their daily study hours using a Linear Regression Machine Learning model.
+A simple and interactive Tkinter GUI is also included, where the user enters their name and study hours, and the app predicts their marks.
+
+📂 Project Overview
+
+This project includes:
+
+✔ Machine Learning Model (Python)
+
+Reads dataset student_info.csv
+
+Cleans missing values
+
+Splits data into training & testing sets
+
+Trains a Linear Regression model
+
+Saves the trained model as .pkl file
+
+Visualizes study hours vs student marks
+
+✔ GUI Application (Tkinter)
+
+User enters name
+
+User enters study hours
+
+Displays predicted marks (with percentage format)
+
+Includes image banner using PIL (Pillow)
+
+Uses the trained model (student_marks_predictor.pkl)
+
+🧠 Tech Used
+Python Libraries
+
+numpy
+
+pandas
+
+matplotlib
+
+scikit-learn
+
+joblib
+
+tkinter
+
+Pillow (PIL)
+
+ML Algorithm
+
+Linear Regression
+
+📊 Dataset Used
+
+Filename: student_info.csv
+
+Columns:
 
 study_hours
 
 student_marks
 
-The model is trained using scikit-learn, visualized with Matplotlib, and cleaned/processed with Pandas.
+Source institution: Unknown / Anonymized (Kaggle Open Dataset)
+(Public dataset, no official institute information provided)
 
-📂 Dataset
+🚀 How to Run the Project
+1. Clone the repository
+git clone https://github.com/yourusername/student-marks-predictor.git
+cd student-marks-predictor
 
-The dataset consists of study hours and marks obtained by different students.
-Some values in the study_hours column are missing, which are handled using mean imputation.
+2. Install required libraries
+pip install numpy pandas matplotlib scikit-learn joblib pillow
 
-Example:
+3. Train the Model (Optional)
 
-study_hours,student_marks
-6.83,78.5
-6.56,76.74
-,78.68
-5.67,71.82
-...
+Run this file if you want to retrain the model:
 
-🧹 Data Preprocessing
+train_model.py
 
-Steps performed:
+4. Run the GUI Application
+python gui_app.py
 
-Load the dataset using pandas.read_csv()
+🖼 GUI Preview
 
-Check missing values
+Takes student name
 
-Fill missing study hours using column mean:
+Takes study hours
 
-df2 = df.fillna(df.mean())
+Predicts expected marks
 
+Shows an image at the top
 
-Split dataset into features (X) and labels (y)
+Displays output in real-time
 
-Train-Test split:
+📁 Files in This Project
+File	Description
+student_info.csv	Training dataset
+train_model.py	ML model training code
+student_marks_predictor.pkl	Saved trained model
+gui_app.py	Tkinter GUI application
+students2.jpeg	Image used in GUI
+README.md	Project documentation
+📌 Model Accuracy
 
-train_test_split(X, y, test_size=0.2, random_state=51)
-
-📊 Data Visualization
-
-A scatter plot is used to show the relationship between study hours and marks:
-
-plt.scatter(df.study_hours, df.student_marks)
-plt.xlabel("Student study hours")
-plt.ylabel("Student marks")
-plt.title("Scatter Plot")
-
-🤖 Model Used — Linear Regression
-
-The model is built using:
-
-from sklearn.linear_model import LinearRegression
-lr = LinearRegression()
-lr.fit(X_train, y_train)
-
-
-Model parameters:
-
-Coefficient (m) → slope
-
-Intercept (c) → y-intercept
-
-Prediction example:
-
-lr.predict([[4]])  # Predict marks for 4 hours of study
-
-
-Model accuracy:
+The model accuracy (R² score) can be printed using:
 
 lr.score(X_test, y_test)
 
-📈 Results
+✨ Features
 
-A final comparison of actual vs predicted values is created:
+Predicts marks with good accuracy
 
-pd.DataFrame(np.c_[X_test, y_test, y_predict], 
-             columns=["study_hours", "student_marks", "y_predict"])
+Easy-to-use graphical interface
 
+Includes data cleaning & visualization
 
-A line plot of the trained model is added for visualization.
+Uses machine learning model trained on real data
 
-💾 Saving and Loading the Trained Model
+📬 Author
 
-The model is saved using joblib:
-
-import joblib
-joblib.dump(lr, "student_marks_predictor.pkl")
-
-
-To load and test:
-
-model = joblib.load("student_marks_predictor.pkl")
-model.predict([[5]])
-
-🛠️ Requirements
-
-Install required libraries:
-
-pip install numpy pandas matplotlib scikit-learn joblib
-
-
-Or using Google Colab (recommended):
-
-!pip install scikit-learn joblib
-
-▶️ How to Run the Code
-
-Upload the dataset in Google Colab using:
-
-from google.colab import files
-files.upload()
-
-
-Run the notebook cells in order.
-
-Train the model.
-
-Predict marks for new study hours.
+Mudasir Iqbal
+Machine Learning Beginner | Python Developer
