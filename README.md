@@ -15,7 +15,7 @@ Cleans missing values
 
 Splits data into training & testing sets
 
-Trains a Linear Regression model
+Trains a Multiple Linear Regression model
 
 Saves the trained model as .pkl file
 
