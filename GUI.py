@@ -16,4 +16,8 @@ if st.button("Predict Marks"):
         st.warning("Please enter the student's name.")
     else:
         prediction = model.predict([[hours]])[0]
+
+        # --- Limit output between 0 and 100 ---
+        prediction = max(0, min(prediction, 100))
+
         st.success(f"{name}'s Predicted Marks is: {prediction:.2f}%")
